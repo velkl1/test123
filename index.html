@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Will you be my Valentine?</title>
+  <title>Za mog mezimceta</title>
 
   <!-- Confetti library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
@@ -117,10 +117,10 @@
     }
 
     .fireworks {
-      width: min(380px, 90vw);
-      margin: 0 auto;
-      display: block;
-    }
+  width: min(200px, 60vw);
+  margin: 0 auto;
+  display: block;
+}
 
     @keyframes pop {
       from { transform: scale(.96); opacity: 0; }
@@ -171,7 +171,7 @@
             fill="#ff7aa2"/>
     </svg>
 
-    <h1>Dano will you be my valentine?</h1>
+    <h1>Hoces biti moj valentine?</h1>
 
     <section class="button-zone" id="zone">
       <button id="yesBtn">Yes</button>
@@ -179,13 +179,12 @@
     </section>
 
     <!-- HINT -->
-    <div class="hint" id="hint">“No” seems a bit shy 😈</div>
 
     <section class="result" id="result">
-      <h2>YAY! 🎉</h2>
+      <h2>Tako sam i mislio! 🎉</h2>
       <img
         class="fireworks"
-        src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"
+        src="IMG_20240426_204642_280.jpg"
         alt="Fireworks"
       />
     </section>
@@ -196,7 +195,6 @@
     const yesBtn = document.getElementById("yesBtn");
     const noBtn = document.getElementById("noBtn");
     const result = document.getElementById("result");
-    const hint = document.getElementById("hint");
 
     /* ---------- CONFETTI ---------- */
     const confettiCanvas = document.getElementById("confettiCanvas");
@@ -292,7 +290,6 @@
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
       zone.style.display = "none";
-      hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
       resizeConfettiCanvas();
       fullScreenConfetti();
